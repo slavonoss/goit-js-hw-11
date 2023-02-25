@@ -10,10 +10,10 @@ const notifyOptions = {
 };
 
 export default function dataFoundAlert(data) {
-  if (data.totalHits === 0) {
+  if (data.totalHits == 0) {
     Notify.warning(
       'Sorry, there are no images matching your search query. Please try again.)',
-      notifyOptions,
+      notifyOptions
     );
     throw new Error('data is 0 items');
   } else {

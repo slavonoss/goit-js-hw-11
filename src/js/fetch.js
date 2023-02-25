@@ -6,12 +6,11 @@ const perPage = 40;
 export default async function getPictures(query, page) {
   const options = {
     params: {
-      key: '233929055-a4001bec97194f441c44cc27a',
+      key: '33929055-a4001bec97194f441c44cc27a',
       q: query,
       per_page: perPage,
       image_type: 'photo',
       orientation: 'horizontal',
-      safesearch: true,
       order: 'popular',
       page: page,
     },
