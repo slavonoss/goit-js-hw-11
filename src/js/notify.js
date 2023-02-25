@@ -5,15 +5,25 @@ const notifyOptions = {
   clickToClose: true,
   timeout: 2000,
   showOnlyTheLastOne: true,
-  position: 'top-right',
+  position: 'rright-top',
   fontSize: '18px',
+  borderRadius: '5px',
+};
+const notifyOptionsERR = {
+  opacity: 0.9,
+  clickToClose: true,
+  timeout: 1000,
+  showOnlyTheLastOne: true,
+  position: 'right-top',
+  fontSize: '18px',
+  borderRadius: '5px',
 };
 
 export default function dataFoundAlert(data) {
   if (data.totalHits == 0) {
     Notify.warning(
       'Sorry, there are no images matching your search query. Please try again.)',
-      notifyOptions
+      notifyOptionsERR
     );
     throw new Error('data is 0 items');
   } else {
